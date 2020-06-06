@@ -1,0 +1,3 @@
+# devops-inventory
+
+* {QID}-{TECHNOLOGY}
