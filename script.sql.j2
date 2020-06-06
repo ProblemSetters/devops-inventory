@@ -1,0 +1,7 @@
+CREATE TABLE {{ table_name_to_replace }} (
+  {{ field_name_to_replace }} VARCHAR(255) NOT NULL
+);
+
+INSERT INTO {{ table_name_to_replace }}({{ field_name_to_replace }}) VALUES (
+  "{{ value_to_replace }}"
+);
