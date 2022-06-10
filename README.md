@@ -1,1 +1,1 @@
-# 1324804-puppet-patch
+# 1325531-puppet-patch
