@@ -1,0 +1,22 @@
+--- HackerSoft.java     2022-06-10 02:10:17.293313182 +0000
++++ fixed/HackerSoft.java       2022-06-10 02:10:17.293313182 +0000
+@@ -1,9 +1,18 @@
++import java.net.InetAddress;
++import java.net.UnknownHostException;
++
+ class HackerSoft{
+   public static void main(String args[]) {
+     String licenseToken = System.getenv("HACKERSOFT_LICENSE_TOKEN");
+-    String hostname = System.getenv("HOSTNAME");
++    String hostname;
+     Runtime.Version version = Runtime.version();
+
++    try {
++      hostname = InetAddress.getLocalHost().getHostName();
++    } catch (UnknownHostException e) {
++      hostname = System.getenv("HOSTNAME");
++    }
++
+     System.out.printf(
+       "%s@%s:%d\n",
+       licenseToken,
